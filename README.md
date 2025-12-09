@@ -49,17 +49,19 @@ NODE_ENV=development
 PORT=3000
 
 # Database Configuration (Supabase PostgreSQL)
-DB_HOST=aws-0-us-west-2.pooler.supabase.com
+DB_HOST=your_database_host
 DB_PORT=6543
-DB_USERNAME=postgres.eqrueaufobcabmnyodfu
-DB_PASSWORD=v7jZMZGh6pV6wMhJ
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
 DB_DATABASE=postgres
 DB_SCHEMA=public
 
 # JWT Configuration
-JWT_SECRET=techhelpdesk_secret_key_2024_kaled_mesa_linus_clan_super_secure
+JWT_SECRET=your_jwt_secret_key_here_change_in_production
 JWT_EXPIRATION=24h
 ```
+
+> **⚠️ Seguridad:** Las credenciales reales están en el archivo `.env` que NO debe ser compartido ni subido a repositorios. El archivo `.env.example` contiene solo plantillas.
 
 ### 4. Poblar la base de datos con datos iniciales
 

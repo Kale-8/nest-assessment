@@ -14,11 +14,11 @@ async function seed() {
     // Configurar conexión a la base de datos
     const dataSource = new DataSource({
         type: 'postgres',
-        host: process.env.DB_HOST || 'aws-0-us-west-2.pooler.supabase.com',
-        port: parseInt(process.env.DB_PORT, 10) || 6543,
-        username: process.env.DB_USERNAME || 'postgres.eqrueaufobcabmnyodfu',
-        password: process.env.DB_PASSWORD || 'v7jZMZGh6pV6wMhJ',
-        database: process.env.DB_DATABASE || 'postgres',
+        host: process.env.DB_HOST,
+        port: parseInt(process.env.DB_PORT, 10),
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DATABASE,
         schema: process.env.DB_SCHEMA || 'public',
         entities: [User, Category, Client, Technician, Ticket],
         synchronize: true,
