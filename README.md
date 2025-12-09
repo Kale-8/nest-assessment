@@ -256,14 +256,6 @@ src/
 - Los tokens JWT expiran en 24 horas
 - Todas las respuestas siguen el formato: `{ success: boolean, data: any, message: string }`
 
-## 🤝 Soporte
-
-Para más información, consulta el archivo `JUSTIFICACION.md` que contiene una explicación detallada del flujo del sistema, requisitos técnicos y criterios de aceptación.
-
-## 📄 Licencia
-
-MIT
-
 ---
 
 **Desarrollado por Kaled Mesa - Clan Linus**
