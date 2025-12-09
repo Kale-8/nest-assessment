@@ -1,4 +1,4 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body, HttpCode, HttpStatus } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { RegisterDto } from './dto/register.dto';
@@ -46,6 +46,7 @@ export class AuthController {
     }
 
     @Post('login')
+    @HttpCode(HttpStatus.OK)
     @ApiOperation({
         summary: 'Iniciar sesión',
         description: 'Autentica un usuario y retorna un token JWT',

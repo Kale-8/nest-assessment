@@ -9,6 +9,11 @@ import { CategoriesModule } from './categories/categories.module';
 import { ClientsModule } from './clients/clients.module';
 import { TechniciansModule } from './technicians/technicians.module';
 import { TicketsModule } from './tickets/tickets.module';
+import { User } from './users/entities/user.entity';
+import { Category } from './categories/entities/category.entity';
+import { Client } from './clients/entities/client.entity';
+import { Technician } from './technicians/entities/technician.entity';
+import { Ticket } from './tickets/entities/ticket.entity';
 
 @Module({
     imports: [
@@ -27,7 +32,7 @@ import { TicketsModule } from './tickets/tickets.module';
             password: process.env.DB_PASSWORD,
             database: process.env.DB_DATABASE,
             schema: process.env.DB_SCHEMA || 'public',
-            entities: [__dirname + '/**/*.entity{.ts,.js}'],
+            entities: [User, Category, Client, Technician, Ticket],
             synchronize: true, // Solo para desarrollo, en producción usar migraciones
             logging: false,
             ssl: {
