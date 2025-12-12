@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { DataSource } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 import { User, UserRole } from '../../users/entities/user.entity';
@@ -30,6 +31,11 @@ async function seed() {
     try {
         await dataSource.initialize();
         console.log('✅ Conexión a la base de datos establecida');
+
+        // Limpiar base de datos
+        console.log('🗑️ Limpiando base de datos...');
+        await dataSource.synchronize(true);
+        console.log('✅ Base de datos limpiada');
 
         // 1. Crear usuarios
         console.log('👤 Creando usuarios...');
